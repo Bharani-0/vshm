@@ -1,0 +1,80 @@
+:root {
+  font-family: Inter, sans-serif;
+  color: #1f2937;
+}
+body {
+  margin: 0;
+  background: #f3f4f6;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+.sidebar {
+  background: #111827;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidebar a {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+.sidebar a.active,
+.sidebar a:hover {
+  background: #374151;
+  color: #fff;
+}
+.content {
+  padding: 24px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+button {
+  margin-right: 8px;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+}
+button.danger {
+  background: #dc2626;
+}
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+  }
+}
